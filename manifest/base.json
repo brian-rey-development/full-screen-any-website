@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Full Screen Any Website",
+  "description": "Make any website full screen like a video. Alt+Shift+F hides the address bar, tabs and sidebar. Click the icon for window mode.",
+  "permissions": ["storage"],
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "action": {
+    "default_title": "Window full screen (Alt+Shift+F for page full screen)",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

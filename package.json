@@ -1,0 +1,33 @@
+{
+  "name": "full-screen-any-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Toggle browser fullscreen on any tab with one click or shortcut.",
+  "scripts": {
+    "build": "tsx scripts/build/build.entry.ts",
+    "icons": "tsx scripts/icons/icons.entry.ts",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "pnpm lint && pnpm format:check && pnpm typecheck && pnpm test"
+  },
+  "engines": {
+    "node": ">=20.11"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/chrome": "^0.3.4",
+    "@types/node": "^26.6.4",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.12.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.9",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.71.0",
+    "vitest": "^5.0.3"
+  }
+}
